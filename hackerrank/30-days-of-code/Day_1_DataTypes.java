@@ -34,3 +34,5 @@ System.out.println(dd+d);
         	the 's' variable above should be printed first. */
 
         scan.close();
+    }
+}
