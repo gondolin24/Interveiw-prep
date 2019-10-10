@@ -1,0 +1,89 @@
+//https://www.hackerrank.com/challenges/find-the-running-median/problem
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    /*
+     * Complete the runningMedian function below.
+     */
+    static double[] runningMedian(int[] a) {
+
+  
+        double[] dd = new double[a.length];
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+        for (int i = 0; i < a.length; i++) {
+            add(maxHeap, minHeap, a[i]);
+            dd[i] = getMedium(maxHeap, minHeap);
+        }
+
+
+        return dd;
+    }
+
+
+    public static void add(PriorityQueue<Integer> maxHeap, PriorityQueue<Integer> minHeap, int n) {
+
+        if (maxHeap.isEmpty()) {
+            maxHeap.add(n);
+        } else if (maxHeap.size() == minHeap.size()) {
+            if (n < minHeap.peek()) {
+                maxHeap.add(n);
+            } else {
+                minHeap.add(n);
+                maxHeap.add(minHeap.remove());
+            }
+        } else if (maxHeap.size() > minHeap.size()) {
+            if (n > maxHeap.peek()) {
+                minHeap.add(n);
+            } else {
+                maxHeap.add(n);
+                minHeap.add(maxHeap.remove());
+            }
+        }
+    }
+
+    public static double getMedium(PriorityQueue<Integer> maxHeap, PriorityQueue<Integer> minHeap) {
+
+        if(maxHeap.isEmpty()) return 0d;
+        if (maxHeap.size() == minHeap.size()) {
+            return ((double) maxHeap.peek() + (double) minHeap.peek()) / 2;
+        } else return maxHeap.peek();
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int aCount = Integer.parseInt(scanner.nextLine().trim());
+
+        int[] a = new int[aCount];
+
+        for (int aItr = 0; aItr < aCount; aItr++) {
+            int aItem = Integer.parseInt(scanner.nextLine().trim());
+            a[aItr] = aItem;
+        }
+
+        double[] result = runningMedian(a);
+
+        for (int resultItr = 0; resultItr < result.length; resultItr++) {
+            bufferedWriter.write(String.valueOf(result[resultItr]));
+
+            if (resultItr != result.length - 1) {
+                bufferedWriter.write("\n");
+            }
+        }
+
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+    }
+}
