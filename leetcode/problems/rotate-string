@@ -1,0 +1,30 @@
+class Solution {
+    public boolean rotateString(String A, String B) {
+        
+        int maxRotations = A.length();
+        String[] aArray = A.split("");
+        String[] bArray = B.split("");
+        
+        for( int i = 0;i<aArray.length;i++){
+            rotateMe(aArray);
+            if(Arrays.equals(aArray,bArray)){
+                return true;
+            }
+        }
+        
+            
+            return false;
+    }
+    
+    public void rotateMe(String[] current){
+        String temp = current[0];
+        
+        for( int i = 0;i<current.length-1;i++){
+            current[i] = current[i+1];
+        }
+        current[current.length-1] = temp;
+    }
+    
+    
+  
+}
