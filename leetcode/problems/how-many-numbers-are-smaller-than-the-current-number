@@ -1,0 +1,27 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
+function subRoutine(array, index){
+    const current = array[index]
+    let count = 0
+    for(let i = 0;i<array.length;i++){
+        if(i!==index){
+            if( array[i]<current){
+                count = count + 1
+            }
+        }
+    }
+ return count
+    
+}
+
+var smallerNumbersThanCurrent = function(nums) {
+    let newArray = []
+    
+    for(let i = 0; i < nums.length;i++){
+        newArray[i] = subRoutine(nums, i)
+    }
+    return newArray 
+};
