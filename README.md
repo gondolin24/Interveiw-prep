@@ -1,3 +1,2 @@
 # Interveiw-prep
-Interview prep
-HackerRank
+Just post solutions for answers for algo questions
