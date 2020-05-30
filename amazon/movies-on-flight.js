@@ -31,3 +31,4 @@ return gg.shift()
 }
 
 console.log(solve( [90, 85, 75, 60, 120, 150, 125],250))
+
