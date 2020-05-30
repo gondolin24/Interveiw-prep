@@ -1,0 +1,90 @@
+AMAZON ONLINE ASSESSMENT
+AMAZON OA2 QUESTIONS
+Zombie Infection ⭐⭐ Online Judge Medium
+Find Substrings ⭐⭐⭐  Online Judge  NEW Hard
+Partition String ⭐⭐  Online Judge  NEW Medium
+Top N Buzzwords ⭐  Online Judge  Easy
+Load Balancer ⭐⭐  Online Judge  Medium
+Find Cirtical Servers ⭐⭐⭐  Online Judge  Hard
+Maximum of Minimum Values I  ⭐  Online Judge  Easy
+Maximum of Minimum Values II  ⭐⭐  Online Judge  Medium
+Longest String Made Up Of Only Vowels ⭐ ⭐  Online Judge  Medium
+Subtree: Maximum Average Node  ⭐  Online Judge  Easy
+Connect Ropes (/Merge Files)  ⭐  Online Judge  Easy
+Min Cost To Add New Roads  ⭐ ⭐ ⭐  Online Judge  Hard
+Min Cost to Repair Edges (Minimum Spanning Tree II)  ⭐ ⭐ ⭐   Online Judge  Hard
+Data Center Cirtical Connections (Minimum Spanning Tree III)  ⭐⭐⭐  Online Judge  Hard
+Movies on Flight ⭐
+Treasure Island I ⭐
+Treasure Island II ⭐ ⭐ ⭐
+K Nearest Post Offices ⭐ ⭐
+Roll Dice ⭐
+Min Cost to Connect All Nodes (Minimum Spanning Tree I) ⭐ ⭐ ⭐
+Cell State After N Days ⭐
+Move The Obstacle ⭐
+Optimize Memory Usage ⭐
+Shopkeeper Sale ⭐ ⭐
+Favorite Genres ⭐
+Longest String Without 3 Consecutive Characters ⭐ ⭐
+(⭐ - difficulty)
+MOVIES ON FLIGHT
+You are on a flight and wanna watch two movies during this flight.
+You are given int[] movie_duration which includes all the movie durations.
+You are also given the duration of the flight which is d in minutes.
+Now, you need to pick two movies and the total duration of the two movies is less than or equal to (d - 30min).
+Find the pair of movies with the longest total duration. If multiple found, return the pair with the longest movie.
+
+e.g.
+Input
+movie_duration: [90, 85, 75, 60, 120, 150, 125]
+d: 250
+
+Output from aonecode.com
+[90, 125]
+90min + 125min = 215 is the maximum number within 220 (250min - 30min)
+.
+TREASURE ISLAND I
+You have a map that marks the location of a treasure island. Some of the map area has jagged rocks and dangerous reefs. Other areas are safe to sail in.
+There are other explorers trying to find the treasure. So you must figure out a shortest route to the treasure island.
+Assume the map area is a two dimensional grid, represented by a matrix of characters.
+You must start from the top-left corner of the map and can move one block up, down, left or right at a time.
+The treasure island is marked as ‘X’ in a block of the matrix. ‘X’ will not be at the top-left corner.
+Any block with dangerous rocks or reefs will be marked as ‘D’. You must not enter dangerous blocks. You cannot leave the map area.
+Other areas ‘O’ are safe to sail in. The top-left corner is always safe.
+Output the minimum number of steps to get to the treasure.
+e.g.
+Input
+[
+[‘O’, ‘O’, ‘O’, ‘O’],
+[‘D’, ‘O’, ‘D’, ‘O’],
+[‘O’, ‘O’, ‘O’, ‘O’],
+[‘X’, ‘D’, ‘D’, ‘O’],
+]
+
+Output from aonecode.com
+Route is (0, 0), (0, 1), (1, 1), (2, 1), (2, 0), (3, 0) The minimum route takes 5 steps.
+.
+TREASURE ISLAND II
+You have a map that marks the locations of treasure islands. Some of the map area has jagged rocks and dangerous reefs. Other areas are safe to sail in.
+There are other explorers trying to find the treasure. So you must figure out a shortest route to one of the treasure island.
+Assume the map area is a two dimensional grid, represented by a matrix of characters.
+You must start from one of the starting point(marked as 'S') of the map and can move one block up, down, left or right at a time.
+The treasure island is marked as ‘X’ in a block of the matrix.
+Any block with dangerous rocks or reefs will be marked as ‘D’. You must not enter dangerous blocks. You cannot leave the map area.
+Other areas ‘O’ are safe to sail in.
+Output the minimum number of steps to get to any of the treasure.
+e.g.
+Input
+[
+[‘S’, ‘O’, ‘O’, 'S', ‘S’],
+[‘D’, ‘O’, ‘D’, ‘O’, ‘D’],
+[‘O’, ‘O’, ‘O’, ‘O’, ‘X’],
+[‘X’, ‘D’, ‘D’, ‘O’, ‘O’],
+[‘X', ‘D’, ‘D’, ‘D’, ‘O’],
+]
+
+Output
+3
+Explanation
+You can start from (0,0), (0, 3) or (0, 4). The treasure locations are (2, 4) (3, 0) and (4, 0). Here the shortest route is (0, 3), (1, 3), (2, 3), (2, 4).
+.
