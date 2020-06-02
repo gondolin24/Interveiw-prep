@@ -1,0 +1,15 @@
+Given a string of lower charasters, remove at most two substrings of any length from the given string such that the remaining string contains vowels('a','e','i','o','u') only.
+
+Your aim is to maximise the length of the remaining string. Output the length of remaining string after removal of at most two substrings.
+
+NOTE: The answer may be 0, i.e. removing the entire string.
+Example1:
+Input:
+earthproblem
+Output:
+3
+Example2:
+Input:
+letsgosomewhere
+Output:
+2
