@@ -89,8 +89,6 @@ function minimumSpanningTree(matrix, numEdges) {
             } else {
                 remove(i,j, tempMatrix)
             }
-        } else {
-            const g = 0
         }
     }
     return count === numEdges - 2
