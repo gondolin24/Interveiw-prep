@@ -2,11 +2,6 @@ function compare(a, b) {
     return JSON.stringify(a) === JSON.stringify(b)
 }
 
-
-function isCycleCreated() {
-
-}
-
 function createMatrix(numNodes) {
     const matrix = []
     const row = []
@@ -113,7 +108,6 @@ function solve(nodes, connection) {
 }
 
 let serversNum = 4
-let connectionsNum = 4
 let connections = [[1, 2], [1, 3], [3, 2], [3, 4]]
 let expected = [[3, 4]]
 
