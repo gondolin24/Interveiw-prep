@@ -1,0 +1,9 @@
+LRU Cache With TTL
+Design and implement the Least Recently
+Used Cache with TTL(Time To Live)
+Expalnation on the eviction stragedy since
+people have questions on the testcase:
+1, after the record expires, it still remains in the cache.
+2, when the cache reaches the capacity, it first
+evicts the expried records. If there are more
+than one expired records, evict the one with the minimum expire timestamp.
